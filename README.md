@@ -23,6 +23,7 @@
 - Responsive Design, Mobile First
 - Auto Redirect If Not Login
 - Auto Redirect To tasks if already Logged in
+- 404 Page
 
 # Note
 
@@ -31,7 +32,15 @@
 # Kindly Make Sure Backend is Up Before Starting The App
 
 In the project directory, you can run:
+### 'npm i' - for installation (one time)
+CD in to project Folder
 
+
+```bash
+
+  npm install
+
+```
 ### `npm start`
 
 Runs the app in the development mode.\

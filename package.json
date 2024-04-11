@@ -1,5 +1,5 @@
 {
-  "name": "todo-apps",
+  "name": "Todo-App",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -38,5 +38,24 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "author": {
+
+    "name": "Harpal Singh",
+
+    "url": "https://github.com/hsk11"
+
+  },
+
+  "license": "MIT",
+
+  "homepage": "https://github.com/hsk11",
+
+  "repository": {
+
+    "type": "git",
+
+    "url": "https://github.com/hsk11"
+
   }
 }

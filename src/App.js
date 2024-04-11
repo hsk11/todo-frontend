@@ -5,6 +5,7 @@ import RegisterForm from './components/RegisterForm';
 import TaskForm from './components/TaskForm';
 import { BrowserRouter, Routes, Route,} from 'react-router-dom';
 import { isUserAuthenticated } from './libs/api';
+import PageNotFound from './components/PageNotFound';
 
 
 // App component with different Routes for Login, Register, and Task components, Redirect to Login if not authenticated
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/login" element={<LoginForm />} />
           <Route path="/register" element={<RegisterForm />} />
           <Route path="/tasks" element={<TaskForm />} />
+          <Route  path="*" element={<PageNotFound />} />
 
         </Routes>
 

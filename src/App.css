@@ -329,6 +329,7 @@
   .anchorButton {
     text-align: center;
     margin: 10px;
+    display: block;
   }
   
   .redText{
