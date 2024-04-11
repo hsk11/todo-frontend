@@ -1,38 +1,356 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.cont {
+    border: 2px solid #eee;
+    padding: 20px;
+    margin: 15px auto;
+    box-shadow: 0 0 10px 1px #ddd;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  
+  /* Base styles */
+  html {
+    font-size: 16px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  body,
+  html,
+  #root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
   }
-}
+  
+  /* App component */
+  .App {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px auto;
+  }
+  
+  /* Form styles */
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  select,
+  textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+  }
+  
+  /* Responsive Typography */
+  @media (max-width: 768px) {
+    html {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    html {
+      font-size: 12px;
+    }
+  }
+  
+  /* Task List Styles */
+  .task-list {
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  @media (max-width: 768px) {
+    .task-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
+  
+  /* Add this inside your App.css */
+  
+  .task-form {
+    margin-bottom: 20px;
+  }
+  
+  .task-form input[type="text"] {
+    margin-right: 5px;
+    width: auto;
+    flex-grow: 1;
+  }
+  
+  .task-form button {
+    width: auto;
+  }
+  
+  
+  /* Add this inside your App.css */
+  
+  .login-form {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+  }
+  
+  .login-form input[type="text"],
+  .login-form input[type="password"] {
+    margin-bottom: 15px;
+  }
+  
+  .login-form button {
+    width: 100%;
+  }
+  
+  /* General styles */
+  body,
+  html,
+  #root {
+    height: 100%;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  
+  .App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    min-height: 100%;
+  }
+  
+  .App-header {
+    margin-bottom: 20px;
+  }
+  
+  button {
+    cursor: pointer;
+    background-color: #eee;
+    border: none;
+    padding: 10px 15px;
+    color: #777;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: background-color 0.2s;
+    margin: 10px;
+  }
+  
+  .buttonMain {
+    cursor: pointer;
+    background-color: #007bff;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: background-color 0.2s;
+    margin: 10px;
+    margin: 10px auto;
+    display: block;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+    color:#fff;
+  }
+  
+  button.red:hover {
+    background-color: #ff0000;
+    color:#fff;
+  }
+  input,
+  select {
+    padding: 10px;
+    margin: 5px 0;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    max-width: 400px;
+  }
+  .tasks {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  }
+  
+  /* Specific to components */
+  .task-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .task-item {
+    background: white;
+    margin-bottom: 8px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  
+  
+  @keyframes dissapear {
+    0%{
+      opacity: 0.1;
+     
+    }
+    40%{
+      opacity: 0.4;
+     
+    }
+    70%{
+      opacity: 0.7;
+    
+    }
+    100%{
+      opacity: 0.9;
+    
+    }
+  }
+  
+  .editing{
+      animation-name: dissapear;
+      animation-duration: 2000ms;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+  }
+  
+  .cancel-btn{
+    display: block;
+    margin: 15px auto;
+    padding: 5px;
+    font-size: 13px;
+  }
+  
+  span.InProgress{
+    color: #f18d00;
+    border-bottom: 1px solid #f18d00;
+  }
+  span.ToDo{
+    color: #0071a5;
+    border-bottom: 1px solid #0071a5;
+  }
+  span.Done{
+    color: #00b600;
+    border-bottom: 1px solid #00b600;
+  }
+  span.Hold{
+    color: #d9534f;
+    border-bottom: 1px solid #d9534f;
+  }
+  
+  
+  .cont.InProgress{
+   
+    border-bottom: 3px solid #f18d00;
+  }
+  .cont.ToDo{
+   
+    border-bottom: 3px solid #0071a5;
+  }
+  .cont.Done{
+  
+    border-bottom: 3px solid #00b600;
+  }
+  .cont.Hold{
+  
+    border-bottom: 3px solid #d9534f;
+  }
+  .search-btn{
+    margin: 5px auto;display: block;
+  }
+  .search{
+    text-align: center;
+  }
+  
+  input{
+  
+    width: 100%;
+    max-width: 100%;
+  }
+  *{
+    box-sizing: border-box;
+  }
+  
+  label {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  
+  .anchorButton {
+    text-align: center;
+    margin: 10px;
+  }
+  
+  .redText{
+    color: red;
+  }
+  
+  .App-header {
+    background: #007bff;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    box-shadow: 0 0 10px 1px #738fae;
+    color: #fff;
+  }
+  .App-header h1 {
+    line-height: 2;
+    padding: 0;
+    margin: 0;
+  }
+  #logout {
+    float: right;
+  }
